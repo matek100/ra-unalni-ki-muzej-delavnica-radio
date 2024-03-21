@@ -1,11 +1,21 @@
-radio.set_group(1) #define the radio group
+# Imports for microbit and radio 
+from microbit import *
+import radio
+
+#set radio group
+radio.config(group=1)
+
+#turn on the radio
+radio.on()
+
 MESSAGE = "Hello, muzej!" #max 19 ASCII characters
 
-def on_button_pressed_a():
-    radio.send_string(MESSAGE)
+while True:
+    #sends a radio message when button A is pressed
+    if button_a.is_pressed(): 
+        radio.send(MESSAGE)
 
-def on_received_string(receivedString):
-    basic.show_string(receivedString)
-
-input.on_button_pressed(Button.A, on_button_pressed_a) #when button A is pressed it calls function on_button_pressed_a
-radio.on_received_string(on_received_string) #when string is recieved it calls function on_received_string
+    #displays radio message when microbit recieves it
+    radio_message = radio.receive()
+    if radio_message:
+        display.scroll(radio_message)
