@@ -1,7 +1,6 @@
 # Imports for microbit and radio 
 from microbit import *
 import radio
-import os
 
 MESSAGE = "dober dan" #max 19 ASCII characters
 OFFSET_KEY = 2 #key used for the caesar cypher
