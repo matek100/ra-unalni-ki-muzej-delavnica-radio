@@ -1,6 +1,6 @@
 # Računalniški-muzej-delavnica-radio
 This is a repository that contains python code needed for a workshop on radio comunication with microbits. Workshop takes place in Računalniški muzej, Ljubljana, Slovenia.
-Each python files contains finished code for each part of the workshop. To use the code simply copy and paste it into the makecode python editor. 
+Each python files contains finished code for each part of the workshop. To use the code simply copy and paste it into the [microbit python editor](https://python.microbit.org). 
 
 ## Content of the repository
 
